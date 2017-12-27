@@ -8,6 +8,9 @@
 ## Backend
 - Configure webserver on the RasPi3
 - Reload page content every minute
+- gmaps api key: AIzaSyCKrN9jytyVDgLJI9kolx-YMT-HvoHwCfY
+- gmaps coordinates: 48.129992, 11.538756
+- zoom level: 11.81z
 
 ## Ideas
 - Display current meals at Medienbistro (http://www.caribbean-embassy.de/mittagstisch/)
