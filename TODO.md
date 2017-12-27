@@ -14,6 +14,8 @@
 
 ## Ideas
 - Display current meals at Medienbistro (http://www.caribbean-embassy.de/mittagstisch/)
-- Display live BUS ans UBAHN departures
+- Display live BUS and UBAHN departures
+- Weather on top of column 1 (center)
+- 
 
 ## Feature Requests
