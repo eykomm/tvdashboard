@@ -1,5 +1,10 @@
 # small scrapy script to extract the current menu from MedienBistro
-# - by LBr 2017
+# - by LBr 17
+#
+# Usage/Setup:
+# > pip install scrapy
+# > scrapy runspider <scriptname.py> -o <outputfile.csv>
+# or run '> scrapy shell' for command line shell and fire commands manually for debugging
 
 import scrapy
 
@@ -9,7 +14,7 @@ class MenuItem(scrapy.Item):
 	meal = scrapy.Field()
 	price = scrapy.Field()
 
-# Define class for website Spider
+# Define class for website spider
 class MenuSpider(scrapy.Spider):
 	name = 'menu'
 	start_urls = ['http://www.caribbean-embassy.de/mittagstisch']
