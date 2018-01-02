@@ -24,7 +24,13 @@ class MenuSpider(scrapy.Spider):
 		rows = response.xpath('//table/tbody/tr')
 		for row in rows:
 			item = MenuItem()
-			item['day'] = row.xpath('th/text()').extract()
-			item['meal'] = row.xpath('td/text()').extract()
-			item['price'] = row.xpath('td[2]/text()').extract()
+			item['day'] =  self.extractText(row,'th//text()')
+			item['meal'] = self.extractText(row,'td[1]//text()')
+			item['price'] = self.extractText(row,'td[2]//text()')
 			yield item
+
+	def extractText(self,row,xpathSelector):
+		extractedLines = row.xpath(xpathSelector).extract()
+		extractedText = " ".join(extractedLines)
+		cleanedText = extractedText.strip()
+		return cleanedText
