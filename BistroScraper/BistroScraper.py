@@ -1,4 +1,4 @@
-# small scrapy script to extract the current menu from MedienBistro
+# small scrapy script to extract the current menu from MedienBistro www.carribean-embassy.de/mittagstisch
 # - by LBr 17
 #
 # Usage/Setup:
