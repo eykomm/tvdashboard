@@ -50,6 +50,39 @@
 				<h2>Placeholder Meals Medienbistro</h2>
 
 				<h3>Display scrapy script output results here</h3>
+				<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"> </script>
+
+				<script>
+					$(function() {
+						var people = [];
+
+				$.getJSON('mvg.json', function(data) {
+					$.each(data.result_sorted, function(i, f) {
+						var tblRow = "<tr>" + "<td>" + f.line + "</td>" +
+						"<td>" + f.destination + "</td>" + "<td>" + f.minutes + "</td>" + "</tr>"
+						$(tblRow).appendTo("#userdata tbody");
+							});
+
+						});
+
+					});
+				</script>
+
+				<div class="wrapper">
+				<div class="profile">
+					<table id= "userdata" border="2">
+							<thead>
+								<th>Linie</th>
+								<th>Richtung</th>
+								<th>Abfahrt in</th>
+							</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+
+				</div>
+				</div>
 
 				<!-- Column 1 end -->
 			</div>
